@@ -121,9 +121,7 @@ function main(): void {
   const message = res
     .map((pr, i) => `${i + 1}. ${formatPullrequestMessage(pr)}`)
     .join('\n')
-  postToSlack(
-    ["*Let's get this review requests done:fire:* \n", message].join('\n')
-  )
+  postToSlack(message)
 }
 
 function sendTestMessageToSlack(): void {
